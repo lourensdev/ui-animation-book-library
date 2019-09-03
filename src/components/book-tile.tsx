@@ -14,12 +14,14 @@ const BookTile: React.FC<IBookTileProps> = props => {
       <div className="e-tile-content">
         <div className="e-tile-title">{props.title}</div>
         <div className="e-tile-author">Leorge Gucas</div>
-        <div
-          className="e-tile-progress"
-          style={{
-            width: `${props.progress}%`
-          }}
-        ></div>
+        <div className="e-tile-progress">
+          <div
+            className="e-tile-progress-bar"
+            style={{
+              width: `${props.progress}%`
+            }}
+          ></div>
+        </div>
       </div>
     </div>
   );

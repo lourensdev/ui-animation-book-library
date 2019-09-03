@@ -5,8 +5,10 @@ import Home from "./pages/home/home";
 const App: React.FC = () => {
   return (
     <div className="b-frame">
-      <div className="e-scroll-view">
-        <Home />
+      <div className="e-bezel">
+        <div className="e-scroll-view">
+          <Home />
+        </div>
       </div>
     </div>
   );
