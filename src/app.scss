@@ -2,13 +2,15 @@
 
 body {
   font-family: 'Quicksand', sans-serif;
-  background-color: $turquoise;
+
+  @media (min-width: $mobile) {
+    background-color: $turquoise;
+  }
 }
 
 .b-frame {
-  background-color: white;
-
   @media (min-width: $mobile) {
+    background-color: white;
     display: block;
     width: 320px;
     height: 600px;
