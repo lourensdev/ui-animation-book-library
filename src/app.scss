@@ -7,25 +7,28 @@ body {
 
 .b-frame {
   background-color: white;
-  display: block;
-  width: 320px;
-  height: 600px;
-  margin: 30px auto;
-  border-radius: 30px;
-  background-color: black;
-  overflow: hidden;
-  box-shadow: 50px 30px 50px 10px rgba(0, 0, 0, 0.1);
 
-  .e-bezel {
-    margin: 30px 10px;
-    background-color: white;
-    border-radius: 20px;
+  @media (min-width: $mobile) {
+    display: block;
+    width: 320px;
+    height: 600px;
+    margin: 30px auto;
+    border-radius: 30px;
+    background-color: black;
     overflow: hidden;
-    height: calc(100% - 60px);
-  }
+    box-shadow: 50px 30px 50px 10px rgba(0, 0, 0, 0.1);
 
-  .e-scroll-view {
-    overflow: auto;
-    height: 100%;
+    .e-bezel {
+      margin: 30px 10px;
+      background-color: white;
+      border-radius: 20px;
+      overflow: hidden;
+      height: calc(100% - 60px);
+    }
+
+    .e-scroll-view {
+      overflow: auto;
+      height: 100%;
+    }
   }
 }
