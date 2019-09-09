@@ -8,7 +8,20 @@
   left: 0;
   overflow: auto;
   z-index: 20;
-  background: linear-gradient(0deg, rgba($turquoise, 1) 0%, rgba($turquoise, 1) 30%, rgba($turquoise-dark, 1) 100%);
+  background: linear-gradient(180deg, rgba($turquoise, 1) 0%, rgba($turquoise, 1) 30%, rgba($turquoise-dark, 1) 100%);
+  background-size: 400% 400%;
+
+  animation: bgRoll ease forwards 0.7s;
+
+  @keyframes bgRoll {
+    from {
+      background-position: 50% 0%;
+    }
+
+    to {
+      background-position: 50% 100%;
+    }
+  }
 
   .e-back {
     position: fixed;
@@ -47,7 +60,21 @@
     min-height: calc(100vh - 250px);
     background-color: white;
     border-radius: 20px 20px 0 0;
-    box-shadow: 0 -10px 22px -6px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 -10px 22px -6px rgba(0, 0, 0, 0.2);
+
+    animation: slideUp ease forwards 0.7s;
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(50%);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
 
   .e-meta {
