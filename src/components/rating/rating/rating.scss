@@ -1,0 +1,9 @@
+.b-rating {
+  display: flex;
+  justify-content: center;
+
+  .e-star {
+    max-width: 10px;
+    margin: 0 2px;
+  }
+}

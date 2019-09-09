@@ -1,0 +1,60 @@
+@import "../../variables.scss";
+
+.b-book {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  z-index: 20;
+  background: linear-gradient(0deg, rgba($turquoise, 1) 0%, rgba($turquoise, 1) 30%, rgba($turquoise-dark, 1) 100%);
+
+  .e-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    img {
+      display: block;
+      margin: 60px auto;
+      max-width: 200px;
+    }
+  }
+
+  .e-description {
+    box-sizing: border-box;
+    margin-top: 250px;
+    font-size: 14px;
+    padding: 40px 30px;
+    min-height: calc(100vh - 250px);
+    background-color: white;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .e-meta {
+    text-align: center;
+  }
+
+  .e-meta-title {
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .e-meta-author {
+    margin-bottom: 7px;
+    font-size: 14px;
+  }
+
+  .e-meta-rating {
+    margin-bottom: 20px;
+  }
+
+  .e-chapter {
+    line-height: 26px;
+  }
+
+}
