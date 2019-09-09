@@ -1,6 +1,7 @@
 import React from "react";
 import "./book.scss";
 import Rating from "../../components/rating/rating/rating";
+import backIcon from "../../images/left_arrow.svg";
 
 export interface IBookProps {
   title: string;
@@ -9,11 +10,15 @@ export interface IBookProps {
   author: string;
   rating: number;
   progress: number;
+  onClose?: () => void;
 }
 
 const Book: React.FC<IBookProps> = props => {
   return (
     <div className="b-book">
+      <div className="e-back" onClick={() => (props.onClose ? props.onClose() : {})}>
+        <img src={backIcon} alt="Back" />
+      </div>
       <div className="e-cover">
         <img src={props.cover} alt={props.title} />
       </div>

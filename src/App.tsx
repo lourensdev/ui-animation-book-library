@@ -62,7 +62,9 @@ class App extends React.Component<{}, IAppState> {
       <div className="b-frame">
         <div className="e-bezel">
           <div className="e-scroll-view">
-            {this.state.book !== null ? <Book {...this.state.book} /> : null}
+            {this.state.book !== null ? (
+              <Book onClose={() => this.setState({ book: null })} {...this.state.book} />
+            ) : null}
             <Home onBookSelect={index => this.setState({ book: books[index] })} books={books} />
           </div>
         </div>

@@ -10,6 +10,19 @@
   z-index: 20;
   background: linear-gradient(0deg, rgba($turquoise, 1) 0%, rgba($turquoise, 1) 30%, rgba($turquoise-dark, 1) 100%);
 
+  .e-back {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    width: 20px;
+    padding: 10px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
   .e-cover {
     position: fixed;
     top: 0;
@@ -21,6 +34,8 @@
       display: block;
       margin: 60px auto;
       max-width: 200px;
+      border-radius: 3px;
+      box-shadow: 10px 10px 22px -6px rgba(0, 0, 0, 0.4);
     }
   }
 
@@ -32,6 +47,7 @@
     min-height: calc(100vh - 250px);
     background-color: white;
     border-radius: 20px 20px 0 0;
+    box-shadow: 0 -10px 22px -6px rgba(0, 0, 0, 0.4);
   }
 
   .e-meta {
