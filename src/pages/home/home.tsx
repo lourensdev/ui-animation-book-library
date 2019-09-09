@@ -1,12 +1,14 @@
 import React from "react";
 import "./home.scss";
 import BookTile from "../../components/book-tile";
+import { IBookProps } from "../book/book";
 
-import cover1 from "../../images/cover_01.png";
-import cover2 from "../../images/cover_02.png";
-import cover3 from "../../images/cover_03.png";
+interface IBooksProps {
+  books: IBookProps[];
+  onBookSelect: (index: number) => void;
+}
 
-class Home extends React.Component<{}, {}> {
+class Home extends React.Component<IBooksProps, {}> {
   render() {
     return (
       <div className="b-home">
@@ -58,9 +60,17 @@ class Home extends React.Component<{}, {}> {
             }}
           ></div>
         </div>
-        <BookTile title="Star Wars" progress={70} cover={cover1} />
-        <BookTile title="The Empire Strikes Back" progress={44} cover={cover2} />
-        <BookTile title="Return Of The Jedi" progress={87} cover={cover3} />
+        {this.props.books.map((book, index) => {
+          return (
+            <BookTile
+              key={index}
+              onClick={() => this.props.onBookSelect(index)}
+              title={book.title}
+              progress={book.progress}
+              cover={book.cover}
+            />
+          );
+        })}
       </div>
     );
   }
